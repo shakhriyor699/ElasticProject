@@ -1,0 +1,24 @@
+main.contact__main
+    .container
+        .contact__main-wrapper
+            .contact__main-left
+                img(src="../images/logo_large.webp" alt="").contact__main-img
+                .contact__left-icons
+                    a(href="#!").slider__about-links
+                        span.fab.icon-behanse
+                    a(href="#!").slider__about-links
+                        span.fab.icon-facebook
+                    a(href="#!").slider__about-links
+                        span.fas.icon-insta
+            .contact__main-right
+                form.contact__main-form
+                    h1.contact__main-title Contact-us
+                    p.contact__main-desc Name
+                    input(type="text" placeholder="Enter your name" required).form__input.name
+                    p.contact__main-desc Email Address
+                    input(type="email" placeholder="Enter your email addres" required).form__input.email
+                    p.contact__main-desc Message
+                    textarea(placeholder="Enter your message here" required).form__area.message
+                    .form__submit
+                        p.form__info We will get back to you within one business day
+                        a.form__btn(href="#!") Submit

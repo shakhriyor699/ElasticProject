@@ -1,0 +1,143 @@
+@font-face{
+    font-family: 'OpenSans-Regular';
+    src: url('../fonts/OpenSans/OpenSans-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'OpenSans-Bold';
+    src: url('../fonts/OpenSans/OpenSans-Bold.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'OpenSans-Light';
+    src: url('../fonts/OpenSans/OpenSans-Light.ttf');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'OpenSans-SemiBold';
+    src: url('../fonts/OpenSans/OpenSans-SemiBold.ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Roboto-Regular';
+    src: url('../fonts/Roboto/Roboto-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Roboto-Bold';
+    src: url('../fonts/Roboto/Roboto-Bold.ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'FontAwesome Brands';
+    src: url('../fonts/FontAwesome/fa-brands-400.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'FontAwesome Duotone';
+    src: url('../fonts/FontAwesome/fa-duotone-900.ttf');
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'FontAwesome Light';
+    src: url('../fonts/FontAwesome/fa-light-300.ttf');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../fonts/FontAwesome/fa-regular-400.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'FontAwesome Solid';
+    src: url('../fonts/FontAwesome/fa-solid-900.ttf');
+    font-weight: 900;
+}
+
+.fad {
+    font-family: 'FontAwesome Duotone';
+    font-style: normal;
+    font-weight: 900;
+}
+.fab{
+    font-family: 'FontAwesome Brands';
+    font-style: normal;
+    font-weight: 400;
+}
+.fa,
+.fas,
+.fal,
+.far {
+    font-family: 'FontAwesome';
+    font-style: normal;
+}
+
+
+
+
+.icon {
+    &-facebook::before {
+        content: '\f39e';
+        font-size: 16px;
+        color: black;
+
+    }
+    &-insta::before {
+        content: '\f16d';
+        font-size: 16px;
+        color: black;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: white;
+    }
+    &-behanse::before {
+        content: '\f1b4';
+        font-size: 16px;
+        color: black;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: white;
+    }
+    &-down::before {
+        content: '\f107';
+        font-size: 25px;
+        color: white;
+    }
+    &-up::before {
+        content: '\f106';
+        font-size: 25px;
+        color: white;
+    }
+    &-phone::before {
+        content: '\f8d3';
+        font-size: 16px;
+        color: white;
+    }
+    &-location::before {
+        content: '\f3c5';
+        font-size: 16px;
+        color: white;
+    }
+    &-mail::before {
+        content: '\f0e0';
+        font-size: 16px;
+        color: white;
+    }
+    &-arrow::before {
+        content: '\f061';
+        font-size: 25px;
+        color: white;
+    }
+}

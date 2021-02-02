@@ -1,0 +1,38 @@
+.header {
+    backdrop-filter: blur(15px);
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    padding: 18px;
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__nav-list {
+        display: flex;
+        align-items: center;
+    }
+
+    &__nav-link {
+        margin-left: 100px;
+        display: inline-block;
+        font-family: $OpenSansSB;
+        font-size: 18px;
+        color: #FFFFFF;
+    }
+
+    &__nav-link.active::after {
+        content: '';
+        display: block;
+        width: 6px;
+        height: 6px;
+        background: #CCAF40;
+        margin: 0 auto;
+        border-radius: 50%;
+    }
+    &__nav-link.active{
+        color: #CCAF40;
+    }
+}

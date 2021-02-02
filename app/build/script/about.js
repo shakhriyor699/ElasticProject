@@ -1,0 +1,1 @@
+"use strict";var burger=document.querySelector(".header__burger"),body=document.querySelector("body");burger.addEventListener("click",function(){burger.classList.contains("active")?(burger.classList.remove("active"),body.style.overflow="scroll"):(burger.classList.add("active"),body.style.overflow="hidden")});

@@ -1,0 +1,82 @@
+main.book__main
+    .container
+        h1.book__main-title Welcome to the booking page!
+        p.book__main-description Kindly provide necessary informations by attending to the questions below.
+        form.book__main-form(action="")
+            section.book__main-options
+                h2.book__main-booking What you booking for? 
+                p.book__main-selectText (you can select multiple options)
+                .book__main-items
+                    - var check = ['Engagement', 'Business event', 'Wedding', 'Birthday', 'Maternity', 'Graduation', 'Product','Honeymoon','Fashion','Anniversary','Food','Conference','Team and workspace','Personal Potrait','Family','Travel shoot','Baby','Others']
+                        each i in check
+                            .checkbox__items
+                                //- input(type="checkbox" id=`${i}` class="checkbox")
+                                //- label(for=`${i}` class="checkbox_text")=i
+                                .checkbox_text= i
+            section.book__main-date
+                h2.book__date-title When and where is the photoshoot?
+                .book__date-inputs
+                    .date_input
+                        input.selected1(type="text" id="date" placeholder="Select date" required onfocus="(this.type='date')" 
+                        onblur="(this.type='text')") 
+                        label(for="date") Date
+                    .date_input
+                        input.selected2(type="text" id="time" placeholder="Select time" required onfocus="(this.type='time')" 
+                        onblur="(this.type='text')")
+                        label(for="time") Time
+                    .date_input
+                        input.selected3(type="text" id="address" placeholder="Enter the location address")
+                        label(for="address") Address
+            
+            section.book__main-price
+                h2.book__price-title Select your preffered package
+                .book__price-items
+                    .book__item
+                        h1.book__item-title Basic
+                        .price 
+                            img(src="../images/currency.webp" alt="")
+                            |30,000
+                        .book__item-text 1 hour shoot
+                        .book__item-text Unlimited photos
+                        .book__item-text Editing included
+                            //- input(id = "basic" class="select_btn" type="radio" text="Basic" name="Select")
+                            //- label.select__price(for="basic") Select
+                        a(href="#!").select_btn Select
+                                
+                    .book__item
+                        h1.book__item-title Basic
+                        .price 
+                            img(src="../images/currency.webp" alt="")
+                            |30,000
+                        .book__item-text 1 hour shoot
+                        .book__item-text Unlimited photos
+                        .book__item-text Editing included
+                            //- input(id = "standart" class="select_btn" type="radio" text="Basic" name="Select")
+                            //- label.select__price(for="standart") Select
+                        a(href="#!").select_btn Select
+                    .book__item
+                        h1.book__item-title Basic
+                        .price 
+                            img(src="../images/currency.webp" alt="")
+                            |30,000
+                        .book__item-text 1 hour shoot
+                        .book__item-text Unlimited photos
+                        .book__item-text Editing included
+                            //- input(id = "premium" class="select_btn" type="radio" text="Basic" name="Select")
+                            //- label.select__price(for="premium") Select
+                        a(href="#!").select_btn Select
+            section.kindly__provide
+                h2.kindly__provide-title Kindly provide your contact details
+                .kindly__provide-inputs
+                    .date_input
+                        input.date__input-enter1(type="text" id="name" placeholder="Enter full name" required)
+                        label(for="name") Name
+                    .date_input
+                        input.date__input-enter2(type="tel" id="phone" placeholder="Enter phone number" required)
+                        label(for="phone") Phone number
+                    .date_input
+                        input.date__input-enter3(type="email" id="email" placeholder="Enter email address" required)
+                        label(for="email") Email
+            .main__book-btns
+                a.book__btn(href="#!") Book now 
+                a.book__btn.bookLater__btn(href="#!") Save and book later

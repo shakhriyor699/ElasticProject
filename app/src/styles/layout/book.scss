@@ -1,0 +1,451 @@
+.header__book {
+    background: #000;
+    padding: 26px 0 29px 0;
+}
+
+.header__burger {
+    display: none;
+    width: 30px;
+    height: 20px;
+    position: relative;
+}
+
+.header__burger span {
+    position: absolute;
+    height: 2px;
+    width: 70%;
+    background: white;
+    top: 9px;
+    transition: all 1s ease 0s;
+
+}
+
+
+
+.header__burger:hover {
+    cursor: pointer;
+}
+
+.header__burger::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 2px;
+    width: 100%;
+    background: white;
+    transition: all 1s ease 0s;
+
+}
+.header__burger~.header__nav-list {
+    transition: all 1s ease 0s;
+}
+
+.header__burger::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background: white;
+    transition: all 1s ease 0s;
+}
+
+.header__burger.active:before {
+    transform: rotate(45deg);
+    top: 9px;
+}
+
+.header__burger.active:after {
+    transform: rotate(-45deg);
+    bottom: 9px;
+}
+
+.header__burger.active span {
+    display: none;
+}
+.header__nav-list{
+    transition: 1s;
+}
+
+.header__burger.active ~ .header__nav-list{
+    left: 0;
+    top: 0;
+    
+    
+}
+
+.book__main {
+
+    &-title {
+        text-align: center;
+        font-family: $OpenSansSB;
+        font-size: 36px;
+        color: #000000;
+        margin-top: 100px;
+        margin-bottom: 11px;
+    }
+
+    &-description {
+        text-align: center;
+        font-family: $OpenSansR;
+        font-size: 24px;
+        color: #000000;
+    }
+
+    &-form {
+        text-align: center;
+        margin-top: 100px;
+    }
+
+    &-booking {
+        font-family: $OpenSansSB;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 33px;
+        color: #000000;
+    }
+
+    &-selectText {
+        font-family: $OpenSansL;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 19px;
+        color: #000000;
+        margin-bottom: 29px;
+    }
+
+    &-items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 100px;
+    }
+}
+
+
+.checkbox {
+    display: none;
+
+
+    &_text {
+        display: block;
+        width: fit-content;
+        font-family: 'OpenSans-SemiBold';
+        font-size: 18px;
+        line-height: 25px;
+        color: #000000;
+        padding: 9px 30px;
+        border: 1px solid #CCAF40;
+        border-radius: 5px;
+        transition: 0.5s;
+        word-break: keep-all;
+        white-space: nowrap;
+    }
+
+    &__items {
+        margin: 0 15px;
+        margin-bottom: 20px;
+    }
+}
+
+// .checkbox:checked~.checkbox_text {
+//     background: #CCAF40;
+//     color: white;
+// }
+.checkbox_text{
+    cursor: pointer;
+    transition: 1s;
+}
+.checkbox_text.active{
+    background: #CCAF40;
+    color: #fff;
+    transition: 1s;
+}
+
+.book__date-title {
+    font-family: $OpenSansSB;
+    font-size: 24px;
+    line-height: 33px;
+    color: #000000;
+    margin-bottom: 27px;
+}
+
+.book__date-inputs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+
+.date_input label {
+    font-family: $OpenSansR;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    color: #000000;
+    position: absolute;
+    background: white;
+    padding: 0 8px;
+    top: -7px;
+    left: 40px;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+
+.date_input input:focus {
+    outline: none;
+}
+
+.date_input {
+    position: relative;
+    width: 30%;
+    margin: 0 25px;
+}
+
+input {
+    width: 100%;
+    height: 56px;
+    border: 2px solid #CCAF40;
+    padding: 16px;
+
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    display: block;
+    background: url(../images/input_icon.webp) no-repeat;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+    border-width: thin;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+    color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    display: block;
+    background: url(../images/input_icon.webp) no-repeat;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+}
+
+.book__price-title {
+    font-family: $OpenSansSB;
+    font-size: 24px;
+    line-height: 33px;
+    color: #000000;
+    margin-bottom: 29px;
+}
+
+.book__main-price {
+    font-family: $OpenSansSB;
+    font-size: 24px;
+    line-height: 33px;
+    color: #000000;
+    margin-bottom: 29px;
+
+}
+
+.book__price-items {
+    display: flex;
+    justify-content: space-between;
+    max-width: 955px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    flex-wrap: wrap;
+}
+
+.book__item {
+    padding: 32px 72px;
+    text-align: center;
+    border: 1px solid #000000;
+
+    &-title {
+        font-family: $OpenSansSB;
+        font-size: 21px;
+        line-height: 29px;
+        text-align: center;
+        color: #000000;
+    }
+
+    &-text {
+        font-family: $OpenSansR;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: center;
+        color: #000000;
+    }
+}
+
+.price {
+    font-family: $OpenSansSB;
+    font-size: 30px;
+    line-height: 41px;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 7px;
+}
+
+.price img {
+    margin-right: 4px;
+}
+
+
+.select_btn {
+    font-family: 'OpenSans-SemiBold';
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 9px 27px;
+    background: #CCAF40;
+    border-radius: 5px;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 50px;
+    border: 2px solid transparent;
+    // display: none;
+    display: inline-block;
+    cursor: pointer;
+}
+.select_btn.active{
+    background: #fff;
+    color: #000;
+    border: 1px solid #CCAF40;
+}
+
+.select_btn~label {
+    font-family: 'OpenSans-SemiBold';
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 9px 27px;
+    background: #CCAF40;
+    border-radius: 5px;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 50px;
+    border: 2px solid transparent;
+    display: block;
+    user-select: none;
+    cursor: pointer;
+}
+
+
+
+.select_btn:checked~label {
+    color: black;
+    background: transparent;
+    border: 2px solid #CCAF40;
+}
+
+.kindly__provide {
+
+
+    &-title {
+        font-family: $OpenSansSB;
+        font-size: 24px;
+        line-height: 33px;
+        color: #000000;
+        margin-bottom: 27px;
+    }
+
+    &-inputs {
+        display: flex;
+    }
+}
+
+.main__book-btns {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 193px;
+}
+
+.book__btn {
+    font-family: $OpenSansSB;
+    font-size: 30px;
+    line-height: 41px;
+    color:  #CCAF40;
+    border: 2px solid #CCAF40;
+    border-radius: 56px;
+    display: inline-block;
+    padding: 18px 45px;
+    margin-top: 100px;
+    transition: 1s;
+    &:hover{
+        background: #CCAF40;
+        box-shadow: 0 0 20px  0 #CCAF40;
+        color: #fff;
+    }
+}
+
+.book__btn:nth-child(1){
+    margin-right: 30px;
+}
+
+.bookLater_btn {
+    margin-left: 30px;
+}
+
+
+/* MEDIA  */
+
+
+
+@media (max-width: 768px){
+    .book__price-items{
+        justify-content: space-around;
+    }
+    .book__item:nth-child(3){
+        margin-top: 20px;
+    }
+    .kindly__provide-inputs{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .date_input:nth-child(3){
+        margin-top: 20px;
+    }
+    .book__date-inputs{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .header__nav-list{
+        background: #000;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 70%;
+        height: 100vh;
+        position: absolute;
+        left: -100%;
+        padding-right: 20px;
+    }
+    .header__burger{
+        display: block;
+    }
+    .main__book-btns{
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 575px ){
+    .book__item:nth-child(2){
+        margin-top: 20px;
+    }
+    .book__btn{
+        margin-top: 30px;
+    }
+    .date_input{
+        width: 200px;
+    }
+    .date_input:nth-child(2){
+        margin-top: 20px;
+    }
+}

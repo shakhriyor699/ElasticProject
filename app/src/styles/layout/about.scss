@@ -1,0 +1,27 @@
+.contact__main-wrapper {
+    display: flex;
+}
+
+.about__right {
+
+    &-title {
+        font-family: $OpenSansR;
+        font-size: 64px;
+        line-height: 87px;
+        color: #FFFFFF;
+        margin-bottom: 29px;
+    }
+
+    &-desc {
+        max-width: 767px;
+        font-family: $OpenSansR;
+        font-size: 36px;
+        line-height: 49px;
+
+        color: #FFFFFF;
+    }
+
+}
+.desc2{
+    margin-top: 52px;
+}

@@ -1,0 +1,133 @@
+
+
+
+
+.header__contact {
+    background: #000;
+    padding-top: 26px;
+    padding-bottom: 29px;
+}
+
+.contact__main {
+    background: #000;
+
+    // padding-top: 184px;
+    // padding-bottom: 109px;
+    &-wrapper {
+        padding-top: 184px;
+        padding-bottom: 109px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &-img {
+        margin-bottom: 92px;
+
+    }
+
+    &-title {
+        font-family: $OpenSansR;
+        font-size: 64px;
+        line-height: 87px;
+        color: #FFFFFF;
+    }
+
+    &-desc {
+        font-family: $OpenSansR;
+        font-size: 25px;
+        line-height: 34px;
+        color: #FFFFFF;
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+.form__input::placeholder {
+    font-family: $OpenSansR;
+    font-size: 18px;
+    line-height: 25px;
+    color: #E4E4E4;
+}
+
+.form__input {
+    outline: none;
+    border: 2px solid #FFFFFF;
+    border-radius: 5px;
+    background: #000;
+    padding-top: 26px;
+    padding-bottom: 27px;
+    padding-left: 25px;
+    width: 570px;
+    height: 78px;
+    margin-bottom: 30px;
+    color: #E4E4E4;
+}
+
+.form__area {
+    width: 570px;
+    height: 352px;
+    outline: none;
+    border: 2px solid #FFFFFF;
+    border-radius: 5px;
+    background: #000;
+    padding-top: 26px;
+    padding-bottom: 27px;
+    padding-left: 25px;
+    font-family: $OpenSansR;
+    font-size: 18px;
+    line-height: 25px;
+    color: #E4E4E4;
+}
+
+.form__submit {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 52px;
+}
+
+.form__info {
+    max-width: 337px;
+    font-family: $OpenSansR;
+    font-size: 24px;
+    line-height: 33px;
+    color: #FFFFFF;
+}
+
+.form__btn {
+    display: inline-block;
+    font-family: $OpenSansSB;
+    font-size: 30px;
+    line-height: 41px;
+    background: #CCAF40;
+    border-radius: 1px;
+    color: #FFFFFF;
+    padding: 19px 44px;
+}
+
+
+// media
+
+
+
+@media (max-width: 768px){
+    .contact__main-wrapper{
+        justify-content: center;
+    }
+}
+@media (max-width: 585px){
+  .form__input, .form__area{
+      width: 70%;
+  }
+  .contact__main-form{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .form__submit{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+}
